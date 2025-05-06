@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qwen开源大语言模型 - 阿里巴巴推出的强大AI模型，支持中英双语，性能卓越">
+    <title>Qwen - 阿里巴巴开源大语言模型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Qwen</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-blue-600 font-medium">首页</a>
+                    <a href="media.html" class="text-gray-500 hover:text-blue-600">媒体报道</a>
+                    <a href="reviews.html" class="text-gray-500 hover:text-blue-600">达人测评</a>
+                    <a href="https://github.com/QwenLM/Qwen" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-900">首页</a>
+                <a href="media.html" class="block px-3 py-2 text-gray-500">媒体报道</a>
+                <a href="reviews.html" class="block px-3 py-2 text-gray-500">达人测评</a>
+                <a href="https://github.com/QwenLM/Qwen" class="block px-3 py-2 text-gray-500">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                    <span class="block">Qwen 开源大语言模型</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    阿里巴巴推出的强大开源AI模型，支持中英双语，性能卓越
+                </p>
+                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                    <div class="rounded-md shadow">
+                        <a href="https://github.com/QwenLM/Qwen" target="_blank" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                            <i class="fab fa-github mr-2"></i>
+                            在 GitHub 上查看
+                        </a>
+                    </div>
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                        <a href="https://huggingface.co/Qwen" target="_blank" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                            模型下载
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 特性介绍 -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">核心特性</h2>
+                <p class="mt-4 text-lg text-gray-500">为什么选择 Qwen</p>
+            </div>
+            <div class="mt-12">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg">
+                                        <i class="fas fa-code-branch text-white text-xl"></i>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">开源可商用</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    完全开源，Apache 2.0协议<br>
+                                    支持商业使用，社区友好<br>
+                                    活跃的开发者社区
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-green-500 rounded-md shadow-lg">
+                                        <i class="fas fa-language text-white text-xl"></i>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">中英双语</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    原生支持中文和英文<br>
+                                    中文理解能力领先<br>
+                                    多语言扩展能力强
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-purple-500 rounded-md shadow-lg">
+                                        <i class="fas fa-layer-group text-white text-xl"></i>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">多种规模</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    从7B到72B多种规模<br>
+                                    适配不同硬件环境<br>
+                                    满足各类应用场景
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                            <div class="-mt-6">
+                                <div>
+                                    <span class="inline-flex items-center justify-center p-3 bg-red-500 rounded-md shadow-lg">
+                                        <i class="fas fa-rocket text-white text-xl"></i>
+                                    </span>
+                                </div>
+                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">性能卓越</h3>
+                                <p class="mt-5 text-base text-gray-500">
+                                    在多项基准测试中表现优异<br>
+                                    推理速度快，响应及时<br>
+                                    支持长文本处理
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模型系列 -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">模型系列</h2>
+                <p class="mt-4 text-lg text-gray-500">选择适合您需求的模型</p>
+            </div>
+            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                <i class="fas fa-microchip text-white text-2xl"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-lg font-medium text-gray-900 truncate">
+                                        Qwen-7B-Chat
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-500">
+                                        70亿参数，适合个人开发者
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-500">
+                                • 支持8GB显存GPU运行<br>
+                                • 响应速度快<br>
+                                • 适合实时对话应用
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-purple-500 rounded-md p-3">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-lg font-medium text-gray-900 truncate">
+                                        Qwen-72B-Chat
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-500">
+                                        720亿参数，性能强大
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-500">
+                                • 媲美GPT-3.5的能力<br>
+                                • 适合复杂推理任务<br>
+                                • 专业领域应用
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-red-500 rounded-md p-3">
+                                <i class="fas fa-image text-white text-2xl"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-lg font-medium text-gray-900 truncate">
+                                        Qwen-VL
+                                    </dt>
+                                    <dd class="mt-1 text-sm text-gray-500">
+                                        多模态版本
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-sm text-gray-500">
+                                • 支持图像理解<br>
+                                • 图文混合输入<br>
+                                • 视觉问答能力
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">关于我们</h3>
+                    <p class="text-gray-400">Qwen Mirror Site 致力于为全球开发者提供便捷的访问渠道，推动开源AI技术的普及与发展。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">官方链接</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://github.com/QwenLM/Qwen" class="hover:text-white">GitHub仓库</a></li>
+                        <li><a href="https://huggingface.co/Qwen" class="hover:text-white">模型下载</a></li>
+                        <li><a href="#" class="hover:text-white">官方文档</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">社区论坛</a></li>
+                        <li><a href="#" class="hover:text-white">技术支持</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© 2025 Qwen Mirror Site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

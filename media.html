@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qwen开源大语言模型的最新媒体报道和新闻动态">
+    <title>媒体报道 - Qwen开源大语言模型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Qwen</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-600">首页</a>
+                    <a href="media.html" class="text-gray-900 hover:text-blue-600 font-medium">媒体报道</a>
+                    <a href="reviews.html" class="text-gray-500 hover:text-blue-600">达人测评</a>
+                    <a href="https://github.com/QwenLM/Qwen" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-500">首页</a>
+                <a href="media.html" class="block px-3 py-2 text-gray-900">媒体报道</a>
+                <a href="reviews.html" class="block px-3 py-2 text-gray-500">达人测评</a>
+                <a href="https://github.com/QwenLM/Qwen" class="block px-3 py-2 text-gray-500">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 头部 -->
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-extrabold text-gray-900">媒体报道</h1>
+                <p class="mt-4 text-lg text-gray-600">了解各大媒体对Qwen的最新动态报道</p>
+            </div>
+        </div>
+
+        <!-- 报道列表 -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="space-y-8">
+                <!-- 报道卡片 1 -->
+                <article class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                            <img class="h-48 w-full object-cover md:w-48" src="https://via.placeholder.com/400x300" alt="机器之心报道Qwen">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-blue-600">机器之心</p>
+                                    <p class="text-xs text-gray-500">2025-01-28</p>
+                                </div>
+                            </div>
+                            <a href="#" class="block mt-2">
+                                <h3 class="text-xl font-semibold text-gray-900">阿里巴巴开源Qwen-72B，性能超越Llama 2，挑战GPT-3.5</h3>
+                                <p class="mt-3 text-gray-500">阿里巴巴达摩院发布了Qwen系列开源大语言模型的重大更新，推出了720亿参数的Qwen-72B。在多项权威评测中，Qwen-72B展现出了超越Meta Llama 2-70B的性能，在某些任务上甚至可以媲美OpenAI的GPT-3.5。</p>
+                            </a>
+                            <div class="mt-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">阅读全文 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 报道卡片 2 -->
+                <article class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                            <img class="h-48 w-full object-cover md:w-48" src="https://via.placeholder.com/400x300" alt="量子位报道Qwen">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-blue-600">量子位</p>
+                                    <p class="text-xs text-gray-500">2025-02-15</p>
+                                </div>
+                            </div>
+                            <a href="#" class="block mt-2">
+                                <h3 class="text-xl font-semibold text-gray-900">开源大模型Qwen更新：支持更长上下文，推理能力显著提升</h3>
+                                <p class="mt-3 text-gray-500">阿里巴巴近日更新了其开源大语言模型Qwen系列，新版本支持32K tokens的超长上下文，同时在数学推理、代码生成等方面的能力都有显著提升。社区反馈显示，新版本在实际应用中的表现更加稳定。</p>
+                            </a>
+                            <div class="mt-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">阅读全文 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 报道卡片 3 -->
+                <article class="bg-white shadow rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                            <img class="h-48 w-full object-cover md:w-48" src="https://via.placeholder.com/400x300" alt="AI科技评论报道Qwen">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-blue-600">AI科技评论</p>
+                                    <p class="text-xs text-gray-500">2025-03-10</p>
+                                </div>
+                            </div>
+                            <a href="#" class="block mt-2">
+                                <h3 class="text-xl font-semibold text-gray-900">Qwen模型在中文NLP任务上创造新纪录</h3>
+                                <p class="mt-3 text-gray-500">最新评测显示，阿里巴巴的Qwen模型在多个中文自然语言处理基准测试中创造了新的最高分。特别是在中文阅读理解、文本生成等任务上，Qwen展现出了明显优于其他开源模型的性能。</p>
+                            </a>
+                            <div class="mt-4">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">阅读全文 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">关于我们</h3>
+                    <p class="text-gray-400">Qwen Mirror Site 致力于为全球开发者提供便捷的访问渠道，推动开源AI技术的普及与发展。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">官方链接</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://github.com/QwenLM/Qwen" class="hover:text-white">GitHub仓库</a></li>
+                        <li><a href="https://huggingface.co/Qwen" class="hover:text-white">模型下载</a></li>
+                        <li><a href="#" class="hover:text-white">官方文档</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">社区论坛</a></li>
+                        <li><a href="#" class="hover:text-white">技术支持</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© 2025 Qwen Mirror Site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

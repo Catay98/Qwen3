@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="知名科技达人对Qwen开源大语言模型的深度测评和使用体验">
+    <title>达人测评 - Qwen开源大语言模型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Qwen</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-600">首页</a>
+                    <a href="media.html" class="text-gray-500 hover:text-blue-600">媒体报道</a>
+                    <a href="reviews.html" class="text-gray-900 hover:text-blue-600 font-medium">达人测评</a>
+                    <a href="https://github.com/QwenLM/Qwen" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                        <i class="fab fa-github mr-2"></i>
+                        GitHub
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-500">首页</a>
+                <a href="media.html" class="block px-3 py-2 text-gray-500">媒体报道</a>
+                <a href="reviews.html" class="block px-3 py-2 text-gray-900">达人测评</a>
+                <a href="https://github.com/QwenLM/Qwen" class="block px-3 py-2 text-gray-500">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 头部 -->
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-extrabold text-gray-900">达人测评</h1>
+                <p class="mt-4 text-lg text-gray-600">来自科技博主、AI研究者和开发者的真实体验</p>
+            </div>
+        </div>
+
+        <!-- 测评卡片网格 -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 测评卡片 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="视频封面" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-play-circle text-white text-4xl"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded">
+                            Bilibili
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900">Qwen-72B深度评测：开源模型的新标杆？</h3>
+                        <div class="flex items-center mt-2">
+                            <img src="https://via.placeholder.com/40" alt="作者头像" class="w-8 h-8 rounded-full">
+                            <span class="ml-2 text-sm text-gray-600">李自然说</span>
+                            <span class="ml-auto text-xs text-gray-500">
+                                <i class="fas fa-eye mr-1"></i> 125.6万
+                            </span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">花了整整一周时间，我对Qwen-72B进行了全方位测试，包括中文理解、代码生成、数学推理等多个维度。结果令人惊喜...</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">
+                            观看视频 →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 测评卡片 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="视频封面" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-play-circle text-white text-4xl"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                            YouTube
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900">本地部署Qwen完整指南 - 从入门到精通</h3>
+                        <div class="flex items-center mt-2">
+                            <img src="https://via.placeholder.com/40" alt="作者头像" class="w-8 h-8 rounded-full">
+                            <span class="ml-2 text-sm text-gray-600">差评君</span>
+                            <span class="ml-auto text-xs text-gray-500">
+                                <i class="fas fa-eye mr-1"></i> 89.3万
+                            </span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">今天我来手把手教大家如何在自己的电脑上部署Qwen模型，包括环境配置、模型下载、性能优化等全流程...</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">
+                            观看视频 →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 测评卡片 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="推文封面" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-external-link-alt text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                            Twitter/X
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900">Qwen vs GPT-4：2025年最强开源模型对决</h3>
+                        <div class="flex items-center mt-2">
+                            <img src="https://via.placeholder.com/40" alt="作者头像" class="w-8 h-8 rounded-full">
+                            <span class="ml-2 text-sm text-gray-600">硅谷王川</span>
+                            <span class="ml-auto text-xs text-gray-500">
+                                <i class="fas fa-heart mr-1"></i> 3.1万
+                            </span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">我用50个不同领域的问题对比测试了Qwen和GPT-4，结果出乎意料。在某些特定任务上，Qwen甚至展现出了超越GPT-4的能力...</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">
+                            阅读全文 →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 测评卡片 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="文章封面" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <i class="fas fa-external-link-alt text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute top-2 right-2 bg-gray-700 text-white text-xs px-2 py-1 rounded">
+                            知乎
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900">一个月使用Qwen开发AI应用的真实体验</h3>
+                        <div class="flex items-center mt-2">
+                            <img src="https://via.placeholder.com/40" alt="作者头像" class="w-8 h-8 rounded-full">
+                            <span class="ml-2 text-sm text-gray-600">代码不止</span>
+                            <span class="ml-auto text-xs text-gray-500">
+                                <i class="fas fa-thumbs-up mr-1"></i> 2.7万
+                            </span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">作为一个全栈开发者，我在过去一个月里使用Qwen开发了3个AI应用。今天来分享一下开发过程中的心得体会，以及踩过的坑...</p>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">
+                            阅读全文 →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">关于我们</h3>
+                    <p class="text-gray-400">Qwen Mirror Site 致力于为全球开发者提供便捷的访问渠道，推动开源AI技术的普及与发展。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">官方链接</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://github.com/QwenLM/Qwen" class="hover:text-white">GitHub仓库</a></li>
+                        <li><a href="https://huggingface.co/Qwen" class="hover:text-white">模型下载</a></li>
+                        <li><a href="#" class="hover:text-white">官方文档</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">社区论坛</a></li>
+                        <li><a href="#" class="hover:text-white">技术支持</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© 2025 Qwen Mirror Site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
